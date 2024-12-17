@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <style>
+        body {
+            background-color: #e63946; /* Red background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
+        #Scanner {
+            border: 3px solid #fff; /* White border around the scanner */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        a {
+            color: #ffffff; /* White text for the link */
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #ffffff; /* White underline for the link */
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #f1faee; /* Slightly off-white color on hover */
+            border-color: #f1faee; /* Hover underline */
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        /* Add transition for a smoother fade-in of the result */
+        #result_container {
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        #result_container:not(.d-none) {
+            opacity: 1;
+        }
+
+        /* Style the entire document */
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Scan QR Code</h1>
+        <div id="Scanner" height="600px" width="600px"></div>
+        <p id="result_container" class="d-none"></p>
+    </div>
+
+    <script>
+        const result_container = document.getElementById("result_container")
+        let onScanSuccess = function (Text, Result) {
+            result_container.innerHTML = `<a href=${Text}/<%=id%>/attendense>click here</a>`;
+            result_container.classList.remove("d-none")
+            html5QrcodeScanner.clear();
+        }
+
+        let onScanFailure = function (error) {
+            console.log("there is an error");
+        }
+
+        let html5QrcodeScanner = new Html5QrcodeScanner(
+            "Scanner",
+            { fps: 20, qrbox: { width: 500, height: 500 } },
+            true);
+        html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+    </script>
+</body>
+
+</html>

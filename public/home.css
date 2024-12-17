@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    position: relative;
+    background-image: url('/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #e63946;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid white;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: #e63946;
+    transform: scale(1.05);
+}
+
+.login-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #e63946;
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1), -3px -3px 6px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.login-btn:hover {
+    background: #e63946;
+    transform: translateY(-3px);
+}
+
+.title-red-bg {
+    background-color: #e63946;
+    padding: 10px;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.title-large {
+    color: #e63946;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.campus-experience {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.campus-experience h2 {
+    font-size: 2.5rem;
+    color: #e63946;
+    margin-bottom: 30px;
+}
+
+.campus-experience .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.campus-experience .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+}
+
+.campus-experience .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.campus-experience .card h3 {
+    font-size: 1.5rem;
+    color: #e63946;
+    margin: 15px;
+}
+
+.campus-experience .card p {
+    margin: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.shape-your-future {
+    background-image: url('/img4.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.shape-your-future::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.shape-your-future-content {
+    position: relative;
+    z-index: 2;
+}
+
+.shape-your-future h2 {
+    font-size: 3rem;
+    background-color: #e63946;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.shape-your-future p {
+    font-size: 1.5rem;
+    background-color: white;
+    color: #e63946;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.shape-your-future .button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#logof {
+    height: 60px;
+    width: 128px;
+}
+
+.footer {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    color: #e63946;
+}
+
+.footer-logo i {
+    color: #e63946;
+    margin: 0 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablet devices */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .title-red-bg {
+        font-size: 2.5rem;
+    }
+
+    .title-large {
+        font-size: 2rem;
+    }
+
+    .campus-experience .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campus-experience .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .shape-your-future h2 {
+        font-size: 2.5rem;
+    }
+
+    .shape-your-future p {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo i {
+        margin: 5px;
+    }
+}
+
+/* For Mobile devices */
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .campus-experience h2 {
+        font-size: 2rem;
+    }
+
+    .campus-experience .card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .campus-experience .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .shape-your-future h2 {
+        font-size: 2rem;
+    }
+
+    .shape-your-future p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .footer-logo i {
+        margin: 5px;
+    }
+}

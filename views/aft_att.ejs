@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Confirmation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #e63946;
+        }
+
+        .confirmation-box {
+            text-align: center;
+            padding: 30px 50px;
+            background: #ffffff;
+            border: 2px solid #e63946;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(230, 57, 70, 0.3);
+        }
+
+        .confirmation-box h1 {
+            font-size: 28px;
+            color: #e63946;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-box p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .confirmation-box button {
+            padding: 12px 25px;
+            font-size: 16px;
+            color: white;
+            background: #e63946;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .confirmation-box button:hover {
+            background: #d62839;
+            transform: scale(1.05);
+        }
+
+        .confirmation-box button:active {
+            background: #ba1f32;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="confirmation-box">
+        <h1>Attendance Saved!</h1>
+        <p>Your attendance has been successfully recorded.</p>
+        <form action="/<%=id%>" method="get">
+            <button>OK</button>
+        </form>
+    </div>
+</body>
+
+</html>

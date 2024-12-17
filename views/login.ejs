@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Login Form -->
+  <div class="form-container login-container">
+    <div class="form-box">
+      <h2>Login</h2>
+      <form method="post" action="/">
+        <div class="input-group">
+          <input type="text" placeholder="Email" required name="id">
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Password" required name="upassword">
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p class="switch-form">Don't have an account? <a class="switch" >Signup</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Form -->
+  <div class="form-container signup-container hidden">
+    <div class="form-box">
+      <h2>Signup</h2>
+      <form method="post" action="/signup">
+        <div class="input-group">
+          <input type="text" placeholder="Username" required name="name">
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Email" required name="id">
+        </div>
+        <div class="input-group">
+          <input type="password" placeholder="Password" required name="password">
+        </div>
+        <button type="submit" class="btn">Signup</button>
+        <p class="switch-form">Already have an account? <a class="switch">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to switch between login and signup forms
+    const switchLinks = document.querySelectorAll('.switch');
+    const loginForm = document.querySelector('.login-container');
+    const signupForm = document.querySelector('.signup-container');
+
+    switchLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        loginForm.classList.toggle('hidden');
+        signupForm.classList.toggle('hidden');
+      });
+    });
+  </script>
+</body>
+</html>

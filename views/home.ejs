@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="login-btn" onclick="redirecttologin()">
+            Login/Signup
+        </div>
+        <div class="hero-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <p class="subtitle">STUDENT ATTENDANSE USING QR CODE<br>LOGAN HERE</p>
+            <div class="title-red-bg">LDRP ITR</div>
+            <div class="title-large" style="background-color: white; padding: 10px;">Attendanse</div>
+            <a href="#" class="button">Learn More</a>
+        </div>
+    </div>
+
+    <div class="campus-experience">
+        <h2>Campus Experience</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img2.jpg" alt="Events and Activities">
+                <h3>Events and Activities</h3>
+                <p>Experience the vibrant campus atmosphere with a variety of events and activities, from sports games
+                    to cultural festivals.</p>
+            </div>
+            <div class="card">
+                <img src="img1.jpg" alt="Student Support Services">
+                <h3>Student Support Services</h3>
+                <p>Get the support you need to succeed, with access to academic advising, counseling services, and
+                    career development.</p>
+            </div>
+            <div class="card">
+                <img src="img3.jpg" alt="Organizations and Clubs">
+                <h3>Organizations and Clubs</h3>
+                <p>Get involved and connect with like-minded students through our diverse range of student organizations
+                    and clubs.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="shape-your-future">
+        <div class="shape-your-future-content">
+            <h2>SHAPE YOUR FUTURE</h2><br>
+            <p>Take the next step towards your academic goals.</p><br>
+            <div class="button" onclick="redirecttologin()">Enroll Now</div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="logo"><img src="logo.png" id="logof"></div>
+        <div class="footer-text" style="color: #e63946;">
+            <h3><i class="fa-regular fa-copyright fa-lg" style="color: #e63946;"></i> 2024 All Rights Reserved.</h3>
+        </div>
+        <div class="footer-logo"><i class="fa-brands fa-instagram fa-2xl" style="color: #e63946;"></i>
+            <i class="fa-brands fa-twitter fa-2xl" style="color: #e63946;"></i>
+            <i class="fa-brands fa-facebook fa-2xl" style="color: #e63946;"></i>
+        </div>
+
+    </div>
+    <script>
+        function redirecttologin(){
+            return window.location.href = "http://localhost:3000/login";
+        }
+    </script>
+</body>
+</html>
